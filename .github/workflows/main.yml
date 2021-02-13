@@ -1,0 +1,14 @@
+name: get workflow run API test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: payload
+        run: |
+          cat $GITHUB_EVENT_PATH
